@@ -151,24 +151,6 @@ https://<ngrok-url>/?user=TYunfa
 
 ---
 
-## 🚀 Future Improvements
-
-* Detect brute-force attacks (Event ID 4625 correlation)
-* Add severity scoring (High / Medium / Low)
-* Integrate threat intelligence (IP reputation)
-* Implement role-based response (admin vs user)
-* Dashboard visualization in Splunk
-
----
-
-## 👨‍💻 Author
-
-**Your Name**
-
-This project is part of my cybersecurity learning journey focused on SOC operations, SIEM, and SOAR automation.
-
----
-
 ## ⭐ Key Takeaway
 
 This project demonstrates how detection, automation, and response can be integrated into a single pipeline, simulating real-world SOC operations with both automation and human decision-making.
