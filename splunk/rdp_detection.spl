@@ -1,1 +1,7 @@
-
+index=MasterShifu-ad EventCode=4624 (Logon_Type=10 OR Logon_Type=7)
+| eval user=coalesce(TargetUserName, Account_Name, user)
+| eval user=mvfilter(NOT match(user, "\$"))
+| search user!="ANONYMOUS LOGON" user!="SYSTEM"
+| dedup user Source_Network_Address
+| eval readable_time=strftime(_time, "%Y-%m-%d %H:%M:%S")
+| stats count by ComputerName, Source_Network_Address, user, Logon_Type, readable_time
